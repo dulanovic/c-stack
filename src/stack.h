@@ -10,8 +10,8 @@ struct Stack {
     size_t length;
 };
 
-struct Stack *new(void);
-void free(struct Stack *stack);
+struct Stack * new(void);
+void freeStack(struct Stack *stack);
 int push(struct Stack *stack, double item);
 double pop(struct Stack *stack);
 int isEmpty(struct Stack *stack);
