@@ -15,7 +15,6 @@ static int increaseMemory(struct Stack *stack) {
     }
     stack->length = newLength;
     stack->items = newArray;
-
     return 1;
 }
 
@@ -41,11 +40,19 @@ struct Stack * new(void) {
 }
 
 void freeStack(struct Stack *stack) {
-    //
+    free(stack->items);
+    free(stack);
 }
 
 int push(struct Stack *stack, double item) {
-    //
+    if (stack->length == stack->last) {
+        if (!increaseMemory(stack)) {
+            return 0;
+        }
+    }
+    *(stack->items + stack->last) = item;
+    stack->last++;
+    return 1;
 }
 
 double pop(struct Stack *stack) {
