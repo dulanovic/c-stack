@@ -15,5 +15,6 @@ void freeStack(struct Stack *stack);
 int push(struct Stack *stack, double item);
 double pop(struct Stack *stack);
 int isEmpty(struct Stack *stack);
+void printStack(struct Stack *stack);
 
 #endif

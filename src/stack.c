@@ -1,6 +1,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <assert.h>
 #include "stack.h"
 
 static int increaseMemory(struct Stack *stack) {
@@ -40,11 +41,13 @@ struct Stack * new(void) {
 }
 
 void freeStack(struct Stack *stack) {
+    assert(stack != NULL);
     free(stack->items);
     free(stack);
 }
 
 int push(struct Stack *stack, double item) {
+    assert(stack != NULL);
     if (stack->length == stack->last) {
         if (!increaseMemory(stack)) {
             return 0;
@@ -56,9 +59,28 @@ int push(struct Stack *stack, double item) {
 }
 
 double pop(struct Stack *stack) {
-    //
+    assert(stack != NULL && !isEmpty(stack));
+    // assert(!isEmpty(stack));
+    (stack->last)--;
+    double d = *(stack->items + stack->last);
+    *(stack->items + stack->last) = 0.0;
+    return d;
 }
 
 int isEmpty(struct Stack *stack) {
-    //
+    assert(stack != NULL);
+    return(stack->last == 0);
+}
+
+void printStack(struct Stack *stack) {
+    assert(stack != NULL);
+    printf("STACK ---> %i (ARRAY ---> %i)\nMemory allocated:\n\tSTACK ---> %i\n\tARRAY ---> %i\nItems in stack: %i\n", stack, stack->items, (int) sizeof(*stack), (int) (stack->length *
+            sizeof(*(stack->items))), stack->last);
+    if (stack->last != 0) {
+        for (int i = 0; i < stack->last; i++) {
+            printf("\tSTACK[%i] ---> %f\n", i, *(stack->items + i));
+        }
+    }
+    printf("Available memory ---> %i bytes (%i item(s))\n\n", (stack->length - stack->last) * 8, (stack->length - stack->last));
+
 }
