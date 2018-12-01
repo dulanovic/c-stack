@@ -60,11 +60,9 @@ int push(struct Stack *stack, double item) {
 
 double pop(struct Stack *stack) {
     assert(stack != NULL && !isEmpty(stack));
-    // assert(!isEmpty(stack));
     (stack->last)--;
-    double d = *(stack->items + stack->last);
-    *(stack->items + stack->last) = 0.0;
-    return d;
+    // *(stack->items + stack->last) = 0.0;
+    return *(stack->items + stack->last);
 }
 
 int isEmpty(struct Stack *stack) {

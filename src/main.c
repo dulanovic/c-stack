@@ -12,24 +12,42 @@ int main(int argc, char *argv[]) {
 
     int error;
     struct Stack *stack = new();
-    if () {
-
+    if (stack == NULL) {
+        handleMemoryError();
     }
     printf("\n\nEMPTY STACK ---> %s\n\n", isEmpty(stack) ? "YES" : "NO");
     printStack(stack);
-    push(stack, 0.001);
+    error = push(stack, 0.001);
+    if (!error) {
+        handleMemoryError();
+    }
     printf("\n\nEMPTY STACK ---> %s\n\n", isEmpty(stack) ? "YES" : "NO");
     printStack(stack);
-    push(stack, 1.20023);
+    error = push(stack, 1.20023);
+    if (!error) {
+        handleMemoryError();
+    }
     printStack(stack);
-    push(stack, 3.04);
+    error = push(stack, 3.04);
+    if (!error) {
+        handleMemoryError();
+    }
     printStack(stack);
-    push(stack, 4);
+    error = push(stack, 4);
+    if (!error) {
+        handleMemoryError();
+    }
     printStack(stack);
-    push(stack, 'V');
+    error = push(stack, 'V');
+    if (!error) {
+        handleMemoryError();
+    }
     printf("\n\nEMPTY STACK ---> %s\n\n", isEmpty(stack) ? "YES" : "NO");
     printStack(stack);
-    push(stack, 5.7);
+    error = push(stack, 5.7);
+    if (!error) {
+        handleMemoryError();
+    }
     printStack(stack);
     printf("\n\n");
     while (!isEmpty(stack)) {
@@ -37,8 +55,6 @@ int main(int argc, char *argv[]) {
         printStack(stack);
     }
     printf("VOILA!!!\n");
-
-    freeStack(stack);
 
     return 0;
 }
