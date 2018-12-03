@@ -72,7 +72,3 @@ void printLL(pStack stack) {
     }
     printf("Total items ---> %i\n\n", items);
 }
-
-int main(int argc, char *argv[]) {
-    //
-}
