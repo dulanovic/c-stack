@@ -14,17 +14,15 @@ stdlib.h
 stack.h
 D:/Projects/C/Stack/src/stack.h
 
-D:/Projects/C/Stack/src/stack.c
-stdio.h
--
-stdlib.h
--
-assert.h
--
-stack.h
-D:/Projects/C/Stack/src/stack.h
-
 D:/Projects/C/Stack/src/stack.h
 stddef.h
 -
+
+D:/Projects/C/Stack/src/stack_linkedlist.c
+malloc.h
+-
+stdio.h
+-
+stack.h
+D:/Projects/C/Stack/src/stack.h
 

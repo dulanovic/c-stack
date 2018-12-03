@@ -79,10 +79,7 @@
 		<Unit filename="D:/Projects/C/Stack/src/main.c">
 			<Option target="Stack"/>
 		</Unit>
-		<Unit filename="D:/Projects/C/Stack/src/stack_array.c">
-			<Option target="Stack"/>
-		</Unit>
-		<Unit filename="D:/Projects/C/Stack/src/stack_array.h">
+		<Unit filename="D:/Projects/C/Stack/src/stack.h">
 			<Option target="Stack"/>
 		</Unit>
 		<Unit filename="D:/Projects/C/Stack/src/stack_linkedlist.c">

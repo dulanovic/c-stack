@@ -149,33 +149,6 @@ src/main.c.s:
 	$(MAKE) -f CMakeFiles\Stack.dir\build.make CMakeFiles/Stack.dir/src/main.c.s
 .PHONY : src/main.c.s
 
-src/stack_array.obj: src/stack_array.c.obj
-
-.PHONY : src/stack_array.obj
-
-# target to build an object file
-src/stack_array.c.obj:
-	$(MAKE) -f CMakeFiles\Stack.dir\build.make CMakeFiles/Stack.dir/src/stack_array.c.obj
-.PHONY : src/stack_array.c.obj
-
-src/stack_array.i: src/stack_array.c.i
-
-.PHONY : src/stack_array.i
-
-# target to preprocess a source file
-src/stack_array.c.i:
-	$(MAKE) -f CMakeFiles\Stack.dir\build.make CMakeFiles/Stack.dir/src/stack_array.c.i
-.PHONY : src/stack_array.c.i
-
-src/stack_array.s: src/stack_array.c.s
-
-.PHONY : src/stack_array.s
-
-# target to generate assembly for a file
-src/stack_array.c.s:
-	$(MAKE) -f CMakeFiles\Stack.dir\build.make CMakeFiles/Stack.dir/src/stack_array.c.s
-.PHONY : src/stack_array.c.s
-
 src/stack_linkedlist.obj: src/stack_linkedlist.c.obj
 
 .PHONY : src/stack_linkedlist.obj
@@ -215,9 +188,6 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
-	@echo ... src/stack_array.obj
-	@echo ... src/stack_array.i
-	@echo ... src/stack_array.s
 	@echo ... src/stack_linkedlist.obj
 	@echo ... src/stack_linkedlist.i
 	@echo ... src/stack_linkedlist.s

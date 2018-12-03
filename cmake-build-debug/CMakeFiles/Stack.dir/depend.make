@@ -4,6 +4,6 @@
 CMakeFiles/Stack.dir/src/main.c.obj: ../src/main.c
 CMakeFiles/Stack.dir/src/main.c.obj: ../src/stack.h
 
-CMakeFiles/Stack.dir/src/stack.c.obj: ../src/stack.c
-CMakeFiles/Stack.dir/src/stack.c.obj: ../src/stack.h
+CMakeFiles/Stack.dir/src/stack_linkedlist.c.obj: ../src/stack.h
+CMakeFiles/Stack.dir/src/stack_linkedlist.c.obj: ../src/stack_linkedlist.c
 
