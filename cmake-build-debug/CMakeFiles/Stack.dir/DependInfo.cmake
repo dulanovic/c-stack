@@ -5,7 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "D:/Projects/C/Stack/src/main.c" "D:/Projects/C/Stack/cmake-build-debug/CMakeFiles/Stack.dir/src/main.c.obj"
-  "D:/Projects/C/Stack/src/stack.c" "D:/Projects/C/Stack/cmake-build-debug/CMakeFiles/Stack.dir/src/stack.c.obj"
+  "D:/Projects/C/Stack/src/stack_array.c" "D:/Projects/C/Stack/cmake-build-debug/CMakeFiles/Stack.dir/src/stack_array.c.obj"
+  "D:/Projects/C/Stack/src/stack_linkedlist.c" "D:/Projects/C/Stack/cmake-build-debug/CMakeFiles/Stack.dir/src/stack_linkedlist.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

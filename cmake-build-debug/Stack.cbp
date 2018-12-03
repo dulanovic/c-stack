@@ -79,10 +79,13 @@
 		<Unit filename="D:/Projects/C/Stack/src/main.c">
 			<Option target="Stack"/>
 		</Unit>
-		<Unit filename="D:/Projects/C/Stack/src/stack.c">
+		<Unit filename="D:/Projects/C/Stack/src/stack_array.c">
 			<Option target="Stack"/>
 		</Unit>
-		<Unit filename="D:/Projects/C/Stack/src/stack.h">
+		<Unit filename="D:/Projects/C/Stack/src/stack_array.h">
+			<Option target="Stack"/>
+		</Unit>
+		<Unit filename="D:/Projects/C/Stack/src/stack_linkedlist.c">
 			<Option target="Stack"/>
 		</Unit>
 		<Unit filename="D:/Projects/C/Stack/CMakeLists.txt">

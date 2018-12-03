@@ -10,51 +10,53 @@ static void handleMemoryError(void) {
 
 int main(int argc, char *argv[]) {
 
-    int error;
-    struct Stack *stack = new();
+    int errorCheck;
+    pStack stack = new();
     if (stack == NULL) {
         handleMemoryError();
     }
     printf("\n\nEMPTY STACK ---> %s\n\n", isEmpty(stack) ? "YES" : "NO");
     printStack(stack);
-    error = push(stack, 0.001);
-    if (!error) {
+    errorCheck = push(stack, 0.001);
+    if (!errorCheck) {
         handleMemoryError();
     }
     printf("\n\nEMPTY STACK ---> %s\n\n", isEmpty(stack) ? "YES" : "NO");
     printStack(stack);
-    error = push(stack, 1.20023);
-    if (!error) {
+    errorCheck = push(stack, 1.20023);
+    if (!errorCheck) {
         handleMemoryError();
     }
     printStack(stack);
-    error = push(stack, 3.04);
-    if (!error) {
+    errorCheck = push(stack, 3.04);
+    if (!errorCheck) {
         handleMemoryError();
     }
     printStack(stack);
-    error = push(stack, 4);
-    if (!error) {
+    errorCheck = push(stack, 4);
+    if (!errorCheck) {
         handleMemoryError();
     }
     printStack(stack);
-    error = push(stack, 'V');
-    if (!error) {
+    errorCheck = push(stack, 'V');
+    if (!errorCheck) {
         handleMemoryError();
     }
     printf("\n\nEMPTY STACK ---> %s\n\n", isEmpty(stack) ? "YES" : "NO");
     printStack(stack);
-    error = push(stack, 5.7);
-    if (!error) {
+    errorCheck = push(stack, 5.7);
+    if (!errorCheck) {
         handleMemoryError();
     }
     printStack(stack);
     printf("\n\n");
+    // printf("stack->length ---> %i\n  stack->last ---> %i (Available ---> %i item(s))\n\n", (int) stack->length, (int) stack->last, (int) (stack->length - stack->last));
     while (!isEmpty(stack)) {
         printf("POPPED VALUE ---> %f\n", pop(stack));
         printStack(stack);
     }
-    printf("VOILA!!!\n");
+    freeStack(stack);
+    printf("\nVOILA!!!\n");
 
     return 0;
 }

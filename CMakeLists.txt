@@ -3,4 +3,4 @@ project(Stack C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(Stack src/main.c src/stack.h src/stack.c)
+add_executable(Stack src/main.c src/stack.h src/stack.c src/stack_linkedlist.c)

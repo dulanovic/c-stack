@@ -149,32 +149,59 @@ src/main.c.s:
 	$(MAKE) -f CMakeFiles\Stack.dir\build.make CMakeFiles/Stack.dir/src/main.c.s
 .PHONY : src/main.c.s
 
-src/stack.obj: src/stack.c.obj
+src/stack_array.obj: src/stack_array.c.obj
 
-.PHONY : src/stack.obj
+.PHONY : src/stack_array.obj
 
 # target to build an object file
-src/stack.c.obj:
-	$(MAKE) -f CMakeFiles\Stack.dir\build.make CMakeFiles/Stack.dir/src/stack.c.obj
-.PHONY : src/stack.c.obj
+src/stack_array.c.obj:
+	$(MAKE) -f CMakeFiles\Stack.dir\build.make CMakeFiles/Stack.dir/src/stack_array.c.obj
+.PHONY : src/stack_array.c.obj
 
-src/stack.i: src/stack.c.i
+src/stack_array.i: src/stack_array.c.i
 
-.PHONY : src/stack.i
+.PHONY : src/stack_array.i
 
 # target to preprocess a source file
-src/stack.c.i:
-	$(MAKE) -f CMakeFiles\Stack.dir\build.make CMakeFiles/Stack.dir/src/stack.c.i
-.PHONY : src/stack.c.i
+src/stack_array.c.i:
+	$(MAKE) -f CMakeFiles\Stack.dir\build.make CMakeFiles/Stack.dir/src/stack_array.c.i
+.PHONY : src/stack_array.c.i
 
-src/stack.s: src/stack.c.s
+src/stack_array.s: src/stack_array.c.s
 
-.PHONY : src/stack.s
+.PHONY : src/stack_array.s
 
 # target to generate assembly for a file
-src/stack.c.s:
-	$(MAKE) -f CMakeFiles\Stack.dir\build.make CMakeFiles/Stack.dir/src/stack.c.s
-.PHONY : src/stack.c.s
+src/stack_array.c.s:
+	$(MAKE) -f CMakeFiles\Stack.dir\build.make CMakeFiles/Stack.dir/src/stack_array.c.s
+.PHONY : src/stack_array.c.s
+
+src/stack_linkedlist.obj: src/stack_linkedlist.c.obj
+
+.PHONY : src/stack_linkedlist.obj
+
+# target to build an object file
+src/stack_linkedlist.c.obj:
+	$(MAKE) -f CMakeFiles\Stack.dir\build.make CMakeFiles/Stack.dir/src/stack_linkedlist.c.obj
+.PHONY : src/stack_linkedlist.c.obj
+
+src/stack_linkedlist.i: src/stack_linkedlist.c.i
+
+.PHONY : src/stack_linkedlist.i
+
+# target to preprocess a source file
+src/stack_linkedlist.c.i:
+	$(MAKE) -f CMakeFiles\Stack.dir\build.make CMakeFiles/Stack.dir/src/stack_linkedlist.c.i
+.PHONY : src/stack_linkedlist.c.i
+
+src/stack_linkedlist.s: src/stack_linkedlist.c.s
+
+.PHONY : src/stack_linkedlist.s
+
+# target to generate assembly for a file
+src/stack_linkedlist.c.s:
+	$(MAKE) -f CMakeFiles\Stack.dir\build.make CMakeFiles/Stack.dir/src/stack_linkedlist.c.s
+.PHONY : src/stack_linkedlist.c.s
 
 # Help Target
 help:
@@ -188,9 +215,12 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
-	@echo ... src/stack.obj
-	@echo ... src/stack.i
-	@echo ... src/stack.s
+	@echo ... src/stack_array.obj
+	@echo ... src/stack_array.i
+	@echo ... src/stack_array.s
+	@echo ... src/stack_linkedlist.obj
+	@echo ... src/stack_linkedlist.i
+	@echo ... src/stack_linkedlist.s
 .PHONY : help
 
 

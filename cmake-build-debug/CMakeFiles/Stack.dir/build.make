@@ -80,45 +80,71 @@ CMakeFiles/Stack.dir/src/main.c.obj.provides: CMakeFiles/Stack.dir/src/main.c.ob
 CMakeFiles/Stack.dir/src/main.c.obj.provides.build: CMakeFiles/Stack.dir/src/main.c.obj
 
 
-CMakeFiles/Stack.dir/src/stack.c.obj: CMakeFiles/Stack.dir/flags.make
-CMakeFiles/Stack.dir/src/stack.c.obj: ../src/stack.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Projects\C\Stack\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Stack.dir/src/stack.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Stack.dir\src\stack.c.obj   -c D:\Projects\C\Stack\src\stack.c
+CMakeFiles/Stack.dir/src/stack_array.c.obj: CMakeFiles/Stack.dir/flags.make
+CMakeFiles/Stack.dir/src/stack_array.c.obj: ../src/stack_array.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Projects\C\Stack\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Stack.dir/src/stack_array.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Stack.dir\src\stack_array.c.obj   -c D:\Projects\C\Stack\src\stack_array.c
 
-CMakeFiles/Stack.dir/src/stack.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Stack.dir/src/stack.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Projects\C\Stack\src\stack.c > CMakeFiles\Stack.dir\src\stack.c.i
+CMakeFiles/Stack.dir/src/stack_array.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Stack.dir/src/stack_array.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Projects\C\Stack\src\stack_array.c > CMakeFiles\Stack.dir\src\stack_array.c.i
 
-CMakeFiles/Stack.dir/src/stack.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Stack.dir/src/stack.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Projects\C\Stack\src\stack.c -o CMakeFiles\Stack.dir\src\stack.c.s
+CMakeFiles/Stack.dir/src/stack_array.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Stack.dir/src/stack_array.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Projects\C\Stack\src\stack_array.c -o CMakeFiles\Stack.dir\src\stack_array.c.s
 
-CMakeFiles/Stack.dir/src/stack.c.obj.requires:
+CMakeFiles/Stack.dir/src/stack_array.c.obj.requires:
 
-.PHONY : CMakeFiles/Stack.dir/src/stack.c.obj.requires
+.PHONY : CMakeFiles/Stack.dir/src/stack_array.c.obj.requires
 
-CMakeFiles/Stack.dir/src/stack.c.obj.provides: CMakeFiles/Stack.dir/src/stack.c.obj.requires
-	$(MAKE) -f CMakeFiles\Stack.dir\build.make CMakeFiles/Stack.dir/src/stack.c.obj.provides.build
-.PHONY : CMakeFiles/Stack.dir/src/stack.c.obj.provides
+CMakeFiles/Stack.dir/src/stack_array.c.obj.provides: CMakeFiles/Stack.dir/src/stack_array.c.obj.requires
+	$(MAKE) -f CMakeFiles\Stack.dir\build.make CMakeFiles/Stack.dir/src/stack_array.c.obj.provides.build
+.PHONY : CMakeFiles/Stack.dir/src/stack_array.c.obj.provides
 
-CMakeFiles/Stack.dir/src/stack.c.obj.provides.build: CMakeFiles/Stack.dir/src/stack.c.obj
+CMakeFiles/Stack.dir/src/stack_array.c.obj.provides.build: CMakeFiles/Stack.dir/src/stack_array.c.obj
+
+
+CMakeFiles/Stack.dir/src/stack_linkedlist.c.obj: CMakeFiles/Stack.dir/flags.make
+CMakeFiles/Stack.dir/src/stack_linkedlist.c.obj: ../src/stack_linkedlist.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Projects\C\Stack\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Stack.dir/src/stack_linkedlist.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Stack.dir\src\stack_linkedlist.c.obj   -c D:\Projects\C\Stack\src\stack_linkedlist.c
+
+CMakeFiles/Stack.dir/src/stack_linkedlist.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Stack.dir/src/stack_linkedlist.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Projects\C\Stack\src\stack_linkedlist.c > CMakeFiles\Stack.dir\src\stack_linkedlist.c.i
+
+CMakeFiles/Stack.dir/src/stack_linkedlist.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Stack.dir/src/stack_linkedlist.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Projects\C\Stack\src\stack_linkedlist.c -o CMakeFiles\Stack.dir\src\stack_linkedlist.c.s
+
+CMakeFiles/Stack.dir/src/stack_linkedlist.c.obj.requires:
+
+.PHONY : CMakeFiles/Stack.dir/src/stack_linkedlist.c.obj.requires
+
+CMakeFiles/Stack.dir/src/stack_linkedlist.c.obj.provides: CMakeFiles/Stack.dir/src/stack_linkedlist.c.obj.requires
+	$(MAKE) -f CMakeFiles\Stack.dir\build.make CMakeFiles/Stack.dir/src/stack_linkedlist.c.obj.provides.build
+.PHONY : CMakeFiles/Stack.dir/src/stack_linkedlist.c.obj.provides
+
+CMakeFiles/Stack.dir/src/stack_linkedlist.c.obj.provides.build: CMakeFiles/Stack.dir/src/stack_linkedlist.c.obj
 
 
 # Object files for target Stack
 Stack_OBJECTS = \
 "CMakeFiles/Stack.dir/src/main.c.obj" \
-"CMakeFiles/Stack.dir/src/stack.c.obj"
+"CMakeFiles/Stack.dir/src/stack_array.c.obj" \
+"CMakeFiles/Stack.dir/src/stack_linkedlist.c.obj"
 
 # External object files for target Stack
 Stack_EXTERNAL_OBJECTS =
 
 Stack.exe: CMakeFiles/Stack.dir/src/main.c.obj
-Stack.exe: CMakeFiles/Stack.dir/src/stack.c.obj
+Stack.exe: CMakeFiles/Stack.dir/src/stack_array.c.obj
+Stack.exe: CMakeFiles/Stack.dir/src/stack_linkedlist.c.obj
 Stack.exe: CMakeFiles/Stack.dir/build.make
 Stack.exe: CMakeFiles/Stack.dir/linklibs.rsp
 Stack.exe: CMakeFiles/Stack.dir/objects1.rsp
 Stack.exe: CMakeFiles/Stack.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Projects\C\Stack\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable Stack.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Projects\C\Stack\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable Stack.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Stack.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -127,7 +153,8 @@ CMakeFiles/Stack.dir/build: Stack.exe
 .PHONY : CMakeFiles/Stack.dir/build
 
 CMakeFiles/Stack.dir/requires: CMakeFiles/Stack.dir/src/main.c.obj.requires
-CMakeFiles/Stack.dir/requires: CMakeFiles/Stack.dir/src/stack.c.obj.requires
+CMakeFiles/Stack.dir/requires: CMakeFiles/Stack.dir/src/stack_array.c.obj.requires
+CMakeFiles/Stack.dir/requires: CMakeFiles/Stack.dir/src/stack_linkedlist.c.obj.requires
 
 .PHONY : CMakeFiles/Stack.dir/requires
 
