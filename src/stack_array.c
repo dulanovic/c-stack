@@ -10,7 +10,7 @@ struct Stack {
     size_t length;
 };
 
-/* static int increaseMemory(struct Stack *stack) {
+/* static int increaseMemoryA(struct Stack *stack) {
     const size_t GROWTH_FACTOR = 2;
     size_t newLength;
     double *newArray;
@@ -25,7 +25,7 @@ struct Stack {
     return 1;
 }
 
-struct Stack * new(void) {
+struct Stack * newA(void) {
     const size_t INITIAL_LENGTH = 2;
     struct Stack *stack;
     double *items;
@@ -46,13 +46,13 @@ struct Stack * new(void) {
     return stack;
 }
 
-void freeStack(struct Stack *stack) {
+void freeA(struct Stack *stack) {
     assert(stack != NULL);
     free(stack->items);
     free(stack);
 }
 
-int push(struct Stack *stack, double item) {
+int pushA(struct Stack *stack, double item) {
     assert(stack != NULL);
     if (stack->length == stack->last) {
         if (!increaseMemory(stack)) {
@@ -64,19 +64,19 @@ int push(struct Stack *stack, double item) {
     return 1;
 }
 
-double pop(struct Stack *stack) {
+double popA(struct Stack *stack) {
     assert(stack != NULL && !isEmpty(stack));
     (stack->last)--;
     // *(stack->items + stack->last) = 0.0;
     return *(stack->items + stack->last);
 }
 
-int isEmpty(struct Stack *stack) {
+int isEmptyA(struct Stack *stack) {
     assert(stack != NULL);
     return(stack->last == 0);
 }
 
-void printStack(struct Stack *stack) {
+void printA(struct Stack *stack) {
     assert(stack != NULL);
     printf("STACK ---> %i (ARRAY ---> %i)\nMemory allocated:\n\tSTACK ---> %i\n\tARRAY ---> %i\nItems in stack: %i\n", stack, stack->items, (int) sizeof(*stack), (int) (stack->length *
             sizeof(*(stack->items))), stack->last);
@@ -89,7 +89,7 @@ void printStack(struct Stack *stack) {
 
 } */
 
-static int increaseMemory(pStack stack) {
+static int increaseMemoryA(pStack stack) {
     const size_t GROWTH_FACTOR = 2;
     size_t newLength;
     double *newArray;
@@ -104,7 +104,7 @@ static int increaseMemory(pStack stack) {
     return 1;
 }
 
-pStack new(void) {
+pStack newA(void) {
     const size_t INITIAL_LENGTH = 2;
     pStack stack;
     double *items;
@@ -125,16 +125,16 @@ pStack new(void) {
     return stack;
 }
 
-void freeStack(pStack stack) {
+void freeA(pStack stack) {
     assert(stack != NULL);
     free(stack->items);
     free(stack);
 }
 
-int push(pStack stack, double item) {
+int pushA(pStack stack, double item) {
     assert(stack != NULL);
     if (stack->length == stack->last) {
-        if (!increaseMemory(stack)) {
+        if (!increaseMemoryA(stack)) {
             return 0;
         }
     }
@@ -143,19 +143,19 @@ int push(pStack stack, double item) {
     return 1;
 }
 
-double pop(pStack stack) {
-    assert(stack != NULL && !isEmpty(stack));
+double popA(pStack stack) {
+    assert(stack != NULL && !isEmptyA(stack));
     (stack->last)--;
     // *(stack->items + stack->last) = 0.0;
     return *(stack->items + stack->last);
 }
 
-int isEmpty(pStack stack) {
+int isEmptyA(pStack stack) {
     assert(stack != NULL);
     return(stack->last == 0);
 }
 
-void printStack(pStack stack) {
+void printA(pStack stack) {
     assert(stack != NULL);
     printf("STACK ---> %i (ARRAY ---> %i)\nMemory allocated:\n\tSTACK ---> %i\n\tARRAY ---> %i\nItems in stack: %i\n", stack, stack->items, (int) sizeof(*stack), (int) (stack->length *
                                                                                                                                                                          sizeof(*(stack->items))), stack->last);

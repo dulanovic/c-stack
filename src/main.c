@@ -8,7 +8,7 @@ static void handleMemoryError(void) {
     exit(EXIT_FAILURE);
 }
 
-int main(int argc, char *argv[]) {
+/* int main(int argc, char *argv[]) {
 
     int errorCheck;
     pStack stack = new();
@@ -59,4 +59,5 @@ int main(int argc, char *argv[]) {
     printf("\nVOILA!!!\n");
 
     return 0;
-}
+
+} */

@@ -13,13 +13,18 @@ double pop(struct Stack *stack);
 int isEmpty(struct Stack *stack);
 void printStack(struct Stack *stack); */
 
-pStack new(void);
-void freeStack(pStack stack);
-int push(pStack stack, double item);
-double pop(pStack stack);
-int isEmpty(pStack stack);
-void printStack(pStack stack);
+pStack newA(void);
+void freeA(pStack stack);
+int pushA(pStack stack, double item);
+double popA(pStack stack);
+int isEmptyA(pStack stack);
+void printA(pStack stack);
 
-
+pStack newLL(void);
+void freeLL(pStack stack);
+int pushLL(pStack stack, double item);
+double popLL(pStack stack);
+int isEmptyLL(pStack stack);
+void printLL(pStack stack);
 
 #endif
