@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-#include "stack_array.h"
+#include "stack.h"
 
 struct Stack {
     double *items;
