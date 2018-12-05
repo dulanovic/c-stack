@@ -63,21 +63,17 @@ int main(int argc, char *argv[]) {
     }
     printLL(stack);
     printf("\n\n");
-    // printf("stack->length ---> %i\n  stack->last ---> %i (Available ---> %i item(s))\n\n", (int) stack->length, (int) stack->last, (int) (stack->length - stack->last));
     while (!isEmptyLL(stack)) {
-        printf("POPPED VALUE ---> %f\n", popLL(stack));
+        printf("POPPED VALUE ---> %f\n", *(double *) popLL(stack));
         printLL(stack);
     }
     freeLL(stack);
     stack = NULL;
-    printf("\nVOILA!!!\n");
 
     /* pStack stack1;
     pStack stack2;
     int iSuccessful;
     double *pd;
-
-    // Create and use a Stack of strings. //
 
     stack1 = newLL();
     if (stack1 == NULL) handleMemoryError();
@@ -96,8 +92,6 @@ int main(int argc, char *argv[]) {
 
     freeLL(stack1);
     stack1 = NULL;
-
-    // Create and use a Stack of doubles. //
 
     stack2 = newLL();
     if (stack2 == NULL) handleMemoryError();
