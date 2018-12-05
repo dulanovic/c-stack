@@ -22,9 +22,13 @@ void printA(pStack stack);
 
 pStack newLL(void);
 void freeLL(pStack stack);
-int pushLL(pStack stack, double item);
-double popLL(pStack stack);
+// int pushLL(pStack stack, double item);
+int pushLL(pStack stack, const void *item);
+// double popLL(pStack stack);
+void *popLL(pStack stack);
 int isEmptyLL(pStack stack);
 void printLL(pStack stack);
+
+
 
 #endif

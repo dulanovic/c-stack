@@ -9,7 +9,8 @@ struct Stack {
 };
 
 struct Node {
-    double value;
+    // double value;
+    const void *value;
     struct Node *next;
 };
 
@@ -27,13 +28,24 @@ void freeLL(pStack stack) {
     struct Node *current = stack->first;
     while (current != NULL) {
         free(current);
-        // printf("VALUE ---> %f\n", current->value);
         current = current->next;
     }
     free(stack);
 }
 
-int pushLL(pStack stack, double item) {
+/* int pushLL(pStack stack, double item) {
+    assert(stack != NULL);
+    struct Node *node = (struct Node *) malloc(sizeof(*node));
+    if (node == NULL) {
+        return 0;
+    }
+    node->value = item;
+    node->next = stack->first;
+    stack->first = node;
+    return 1;
+} */
+
+int pushLL(pStack stack, const void *item) {
     assert(stack != NULL);
     struct Node *node = (struct Node *) malloc(sizeof(*node));
     if (node == NULL) {
@@ -45,12 +57,20 @@ int pushLL(pStack stack, double item) {
     return 1;
 }
 
-double popLL(pStack stack) {
+/* double popLL(pStack stack) {
     assert(stack != NULL && stack->first != NULL);
     struct Node temp = {stack->first->value, stack->first->next};
     free(stack->first);
     stack->first = temp.next;
     return temp.value;
+} */
+
+void *popLL(pStack stack) {
+    assert(stack != NULL && stack->first != NULL);
+    struct Node temp = {stack->first->value, stack->first->next};
+    free(stack->first);
+    stack->first = temp.next;
+    return (void*) temp.value;
 }
 
 int isEmptyLL(pStack stack) {
@@ -68,7 +88,7 @@ void printLL(pStack stack) {
     printf("\n<<<--------- STACK --------->>>\n");
     for (struct Node *current = stack->first; current != NULL; current = current->next) {
         items++;
-        printf("Item -%i-\t(VALUE ---> %.4f)\n", items, current->value);
+        printf("Item -%i-\t(VALUE ---> %g)\n", items, *((double *) current->value));
     }
     printf("Total items ---> %i\n\n", items);
 }
