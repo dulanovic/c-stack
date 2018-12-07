@@ -16,13 +16,13 @@ static void printStack(void *item, void *extra) {
 
 static void sum(void *item, void *extra) {
     assert(item != NULL && extra != NULL);
-    double value = *(double*) item;
-    *(double *) extra += value;
+    *(double *) extra += *(double*) item;
 }
 
 static void freeValue(void *item, void *extra) {
     assert(item != NULL);
     free(item);
+    item = NULL;
     // free(extra);
 }
 
@@ -190,10 +190,10 @@ int main(int argc, char *argv[]) {
     if (!iSuccessful)
         handleMemoryError();
     pd = NULL;
-    mapLL(oStack2, sum, &dSum);
-    printf("The sum is %g.\n", dSum);
-    mapLL(oStack2, freeValue, NULL);
     printLL(oStack2);
+    mapLL(oStack2, sum, &dSum);
+    printf("SUM ---> %g\n", dSum);
+    mapLL(oStack2, freeValue, NULL);
     freeLL(oStack2);
     oStack2 = NULL;
 

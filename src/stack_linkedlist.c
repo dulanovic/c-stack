@@ -27,9 +27,8 @@ void freeLL(pStack stack) {
     assert(stack != NULL);
     struct Node *current = stack->first;
     struct Node *next;
-    printf("\n");
     while (current != NULL) {
-        printf("VALUE ---> %f\n", *(double*) current->value);
+        // printf("VALUE ---> %g\n", *(double*) current->value);
         next = current->next;
         free(current);
         current = next;
