@@ -1,6 +1,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <assert.h>
 #include "stack.h"
 
 static void handleMemoryError(void) {
@@ -8,9 +9,26 @@ static void handleMemoryError(void) {
     exit(EXIT_FAILURE);
 }
 
+static void printStack(void *item, void *extra) {
+    assert(item != NULL && extra != NULL);
+    printf((char*) item, (char*) extra);
+}
+
+static void sum(void *item, void *extra) {
+    assert(item != NULL && extra != NULL);
+    double value = *(double*)item;
+    *(double *)extra += value;
+}
+
+static void freeValue(void *item, void *extra) {
+    assert(item != NULL && extra != NULL);
+    free(item);
+    // free(extra);
+}
+
 int main(int argc, char *argv[]) {
 
-    int errorCheck;
+    /* int errorCheck;
     double d1 = 0.001;
     double d2 = 1.20023;
     double d3 = 3.04;
@@ -68,9 +86,9 @@ int main(int argc, char *argv[]) {
         printLL(stack);
     }
     freeLL(stack);
-    stack = NULL;
+    stack = NULL; */
 
-    /* pStack stack1;
+    pStack stack1;
     pStack stack2;
     int iSuccessful;
     double *pd;
@@ -116,15 +134,70 @@ int main(int argc, char *argv[]) {
 
     pd = NULL;
 
-    while (!isEmptyLL(stack2)) {
+    /* while (!isEmptyLL(stack2)) {
         pd = (double*) popLL(stack2);
         printf("POPPED VALUE ---> %g\n", *pd);
         free(pd);
         pd = NULL;
-    }
+    } */
 
     freeLL(stack2);
-    stack2 = NULL; */
+    stack2 = NULL;
+
+    /* pStack oStack1;
+    pStack oStack2;
+    int iSuccessful;
+    double *pd;
+    double dSum = 0.0;
+
+    oStack1 = newLL();
+    if (oStack1 == NULL) handleMemoryError();
+
+    iSuccessful = pushLL(oStack1, "Ruth");
+    if (! iSuccessful) handleMemoryError();
+
+    iSuccessful = pushLL(oStack1, "Gehrig");
+    if (! iSuccessful) handleMemoryError();
+
+    iSuccessful = pushLL(oStack1, "Mantle");
+    if (! iSuccessful) handleMemoryError();
+
+    mapLL(oStack1, printStack, "%s\n");
+
+    freeLL(oStack1);
+    oStack1 = NULL;
+
+    oStack2 = newLL();
+    if (oStack2 == NULL) handleMemoryError();
+
+    pd = (double*) malloc(sizeof(double));
+    if (pd == NULL) handleMemoryError();
+    *pd = 1.1;
+    iSuccessful = pushLL(oStack2, pd);
+    if (! iSuccessful) handleMemoryError();
+
+    pd = (double*) malloc(sizeof(double));
+    if (pd == NULL) handleMemoryError();
+    *pd = 2.2;
+    iSuccessful = pushLL(oStack2, pd);
+    if (! iSuccessful) handleMemoryError();
+
+    pd = (double*)malloc(sizeof(double));
+    if (pd == NULL) handleMemoryError();
+    *pd = 3.3;
+    iSuccessful = pushLL(oStack2, pd);
+    if (! iSuccessful) handleMemoryError();
+
+    pd = NULL;
+
+    mapLL(oStack2, sum, &dSum);
+
+    printf("The sum is %g.\n", dSum);
+
+    mapLL(oStack2, freeValue, NULL);
+
+    freeLL(oStack2);
+    oStack2 = NULL; */
 
     return(EXIT_SUCCESS);
 

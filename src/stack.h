@@ -28,7 +28,6 @@ int pushLL(pStack stack, const void *item);
 void *popLL(pStack stack);
 int isEmptyLL(pStack stack);
 void printLL(pStack stack);
-
-
+void mapLL(pStack stack, void (*func)(void *item, void *extra), const void *extra);
 
 #endif

@@ -26,10 +26,15 @@ pStack newLL(void) {
 void freeLL(pStack stack) {
     assert(stack != NULL);
     struct Node *current = stack->first;
+    struct Node *next;
+    printf("\nbefore loop...\n");
     while (current != NULL) {
+        printf("VALUE ---> %s\n", (char*) next->value);
+        next = current->next;
         free(current);
-        current = current->next;
+        current = next;
     }
+    printf("\nafter loop...\n");
     free(stack);
 }
 
@@ -76,6 +81,14 @@ void *popLL(pStack stack) {
 int isEmptyLL(pStack stack) {
     assert(stack != NULL);
     return(stack->first == NULL);
+}
+
+void mapLL(pStack stack, void (*func)(void *item, void *extra), const void *extra) {
+    assert(stack != NULL && func != NULL);
+    struct Node *current;
+    for (current = stack->first; current != NULL; current = current->next) {
+        (*func)((void*) current->value, (void*) extra);
+    }
 }
 
 void printLL(pStack stack) {

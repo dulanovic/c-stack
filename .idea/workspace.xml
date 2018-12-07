@@ -13,8 +13,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b658d420-f3ef-4f0d-ace9-8fc0d961b05e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Stack.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Stack.dir/objects.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stack.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/stack.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stack_linkedlist.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/stack_linkedlist.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,17 +31,17 @@
       <file leaf-file-name="stack.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stack.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+            <state relative-caret-position="420">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stack_linkedlist.c" pinned="false" current-in-tab="false">
+      <file leaf-file-name="stack_linkedlist.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/stack_linkedlist.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2418">
-              <caret line="93" column="1" lean-forward="true" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="1" />
+            <state relative-caret-position="936">
+              <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
               <folding>
                 <element signature="e#1#20#0" expanded="true" />
               </folding>
@@ -48,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.c" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1352">
-              <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+            <state relative-caret-position="420">
+              <caret line="113" column="21" lean-forward="true" selection-start-line="113" selection-start-column="21" selection-end-line="113" selection-end-column="21" />
               <folding>
                 <element signature="e#1#19#0" expanded="true" />
               </folding>
@@ -105,7 +106,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -122,6 +122,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -179,20 +180,21 @@
       <workItem from="1543968676178" duration="3576000" />
       <workItem from="1543975214941" duration="165000" />
       <workItem from="1544007446893" duration="2438000" />
-      <workItem from="1544016118930" duration="328000" />
+      <workItem from="1544016118930" duration="395000" />
+      <workItem from="1544147496618" duration="49000" />
+      <workItem from="1544150823622" duration="4200000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51157000" />
+    <option name="totallyTimeSpent" value="55473000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17862372" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Messages" order="7" visible="true" weight="0.44285715" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.44285715" />
       <window_info anchor="bottom" id="CMake" order="7" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
@@ -576,27 +578,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stack.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stack_linkedlist.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2418">
-          <caret line="93" column="1" lean-forward="true" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="1" />
-          <folding>
-            <element signature="e#1#20#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="420">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1352">
-          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+        <state relative-caret-position="420">
+          <caret line="113" column="21" lean-forward="true" selection-start-line="113" selection-start-column="21" selection-end-line="113" selection-end-column="21" />
           <folding>
             <element signature="e#1#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stack_linkedlist.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+          <folding>
+            <element signature="e#1#20#0" expanded="true" />
           </folding>
         </state>
       </provider>

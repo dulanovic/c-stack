@@ -11,6 +11,8 @@ stdio.h
 -
 stdlib.h
 -
+assert.h
+-
 stack.h
 D:/Projects/C/Stack/src/stack.h
 
