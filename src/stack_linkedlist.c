@@ -15,7 +15,7 @@ struct Node {
 };
 
 pStack newLL(void) {
-    pStack stack = (pStack) malloc(sizeof(pStack *));
+    pStack stack = (pStack) malloc(sizeof (pStack *));
     if (stack == NULL) {
         return NULL;
     }
@@ -27,14 +27,13 @@ void freeLL(pStack stack) {
     assert(stack != NULL);
     struct Node *current = stack->first;
     struct Node *next;
-    printf("\nbefore loop...\n");
+    printf("\n");
     while (current != NULL) {
-        printf("VALUE ---> %s\n", (char*) next->value);
+        printf("VALUE ---> %f\n", *(double*) current->value);
         next = current->next;
         free(current);
         current = next;
     }
-    printf("\nafter loop...\n");
     free(stack);
 }
 
@@ -52,7 +51,7 @@ void freeLL(pStack stack) {
 
 int pushLL(pStack stack, const void *item) {
     assert(stack != NULL);
-    struct Node *node = (struct Node *) malloc(sizeof(*node));
+    struct Node *node = (struct Node *) malloc(sizeof (*node));
     if (node == NULL) {
         return 0;
     }
@@ -80,7 +79,7 @@ void *popLL(pStack stack) {
 
 int isEmptyLL(pStack stack) {
     assert(stack != NULL);
-    return(stack->first == NULL);
+    return (stack->first == NULL);
 }
 
 void mapLL(pStack stack, void (*func)(void *item, void *extra), const void *extra) {
